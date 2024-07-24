@@ -34,13 +34,12 @@ export class AuthService {
         }
     }
 
-    async getCurrentUser({email, password}){
+    async getCurrentUser(){
         try {
             return await this.account.get();
         } catch (error) {
             throw error;
         }
-        return null;
     }
 
     async logout(){
@@ -54,4 +53,4 @@ export class AuthService {
 
 const authService = new AuthService()
 
-export default AuthService
+export default authService
